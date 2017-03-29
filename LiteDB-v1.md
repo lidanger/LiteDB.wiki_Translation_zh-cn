@@ -821,7 +821,7 @@ LiteDB is a single file database. But databases has many different types of info
 
 Each page has a own header and content. Header is used to manage common data structure like PageID, PageType, Free Space. Content are implement different on each page type.
 
-#### Page free space
+#### 页面未使用空间
 
 Index pages and data pages contains a collection of elements (index nodes and data blocks). This pages can store data and keep with available space to more. To hold this free space on each page type, LiteDB implements free list pages.
 
