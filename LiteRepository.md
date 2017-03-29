@@ -31,4 +31,4 @@ using(var db = new LiteRepository(connectionString))
 
 集合名称可以省略，会被新的`BsonMapper.ResolveCollectionName`函数解析（默认：`typeof(T).Name`）。
 
-这个API是受这个伟大的项目的启发[NPoco Micro-ORM](https://github.com/schotime/NPoco)
+这个API是受这个牛B的项目的启发[NPoco Micro-ORM](https://github.com/schotime/NPoco)
