@@ -45,7 +45,7 @@ using(var db = new LiteDatabase("mydb.db"))
     var customer = col.FindOne(Query.EQ("Name", "john doe"));
 }
 ```
-# LiteDatabase API 实例方法
+### LiteDatabase API 实例方法
 
 - **`GetCollection<T>`** - 这个方法返回`LiteCollection`的一个实例。如果省略`<T>`，`<T>`为`BsonDocument`。这是仅有的获取一个集合实例的方式。
 - **`RenameCollection`** - 仅重命名一个集合名称 - 不改变任何文档
