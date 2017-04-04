@@ -1,6 +1,6 @@
 # LiteDB - A .NET NoSQL Document Store
 
-欢迎来到LiteDB文档Wiki页面。在这里你会找到所有你需要的信息，以更好地了解LiteDB以及你可以怎样使用。
+欢迎来到LiteDB文档Wiki页面。在这里你会找到所有你需要的信息，以更好地了解LiteDB以及你可以怎样使用它。
 
 > Documentation for **v.1.0.x**
 
