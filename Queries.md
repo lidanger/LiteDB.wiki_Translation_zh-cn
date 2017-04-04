@@ -1,4 +1,4 @@
-在LiteDB中，查询必须在搜索字段上有一个索引来查找文档。如果字段上没有索引，LiteDB自动使用默认选项创建一个新索引。要做查询，你可以使用：
+在LiteDB中查询时，必须在所搜索字段上有一个索引才能查找文档。如果字段上没有索引，LiteDB会自动使用默认选项创建一个新索引。要做查询，你可以使用：
 
 - `Query`静态帮助类
 - 使用 LINQ 表达式
@@ -46,10 +46,10 @@ var results = col.Find(Query.And(Query.All("Age", Query.Descending), Query.Betwe
 
 在所有查询中：
 
-- **Field** 必须有一个索引 (使用`EnsureIndex`, `[BsonIndex]` 特性或fluent mapper创建。参考[[Indexes]])。如果没有索引，LiteDB会快速创建一个新索引。
+- **Field** 上必须有一个索引 (使用`EnsureIndex`, `[BsonIndex]` 特性或fluent mapper创建。参考[[Indexes]])。如果没有索引，LiteDB会快速创建一个新索引。
 - **Field** 名称在左侧，**Value** (或多个值)在右侧
-- 查询在`BsonDocument`类中执行，不需要先映射到你的对象。你需要使用`BsonDocument`字段名称和BSON类型值。如果你使用一个自定义`ResolvePropertyName`或`[BsonField]`特性，你必须使用你的文档字段名称，而不是你的类型的属性名称。参考[Object Mapping](Object-Mapping).
-- LiteDB不支持表达式值，如`CreationDate == DueDate`.
+- 查询在`BsonDocument`类中执行，不需要先映射到你的对象。你需要使用`BsonDocument`字段名称和BSON类型值。如果使用了一个自定义`ResolvePropertyName`或`[BsonField]`特性，你必须使用文档的字段名称，而不是类型的属性名称。参考[对象映射](Object-Mapping).
+- LiteDB不支持表达式值，如`CreationDate == DueDate`。
 
 ### Find(), FindById(), FindOne() 和 FindAll()
 
@@ -62,9 +62,9 @@ var results = col.Find(Query.And(Query.All("Age", Query.Descending), Query.Betwe
 
 `Find()`支持`Skip`和`Limit`参数。这些操作可用于索引级别，因此它比LINQ to Objects更高效。
 
-`Find()`方法返回一个文档`IEnumerable`。如果你想做更复杂的过滤，如值为表达式，排序或转换结果等，你可以使用LINQ to Objects。
+`Find()`方法返回文档的一个`IEnumerable`。如果你想做更复杂的过滤，如值为表达式，排序或转换结果等，你可以使用LINQ to Objects。
 
-返回一个`IEnumerable` 后，你的代码仍然连接到数据文件。只有当你完成消费所有数据，数据文件才会被断开。
+返回一个`IEnumerable`后，你的代码仍然与数据文件保持连接。只有当你消费完所有数据后，才会断开数据文件。
 
 ```C#
 col.EnsureIndex(x => x.Name);
@@ -82,7 +82,7 @@ var result = col
 
 ### Count() 和 Exists()
 
-这两个方法很有用，因为你可以统计文档（或者检查一个文档是否存在）而不反序列化文档。
+这两个方法很有用，因为你可以在不反序列化文档的情况下统计文档（或者检查一个文档是否存在）。
 
 ```C#
 // 这种方式更高效
@@ -98,16 +98,16 @@ var count = collection.Find(Query.EQ("Name", "John Doe")).Count();
 
 ### Min() 和 Max()
 
-LiteDB使用一个跳跃表实现索引(参考[Indexes](Indexes))。集合提供`Min`和`Max`索引值。实现是：
+LiteDB使用一个跳跃表实现索引(参考[索引](Indexes))。集合提供`Min`和`Max`索引值。实现是：
 
 - **`Min`** - 读取头部索引节点(MinValue BSON 数据类型)并移动到下一个节点。这个节点是索引中的最小值。如果索引是空的，返回MinValue。最小值不是第一个值!
 - **`Max`** - 读取尾部索引节点(MaxValue BSON 数据类型)并移动到前一个节点。这个节点是索引中的最大值。如果索引是空的，返回MaxValue。最大值不是最后一个值!
 
-`Max`操作可用于`Int32`的`AutoId`。很快就可以获取到这个值，因为只需要读取两个索引节点(尾部+前一个)。
+`Max`操作可用于`Int32`的`AutoId`。这个值获取起来很快，因为只需要读取两个索引节点(尾部+前一个)。
 
 ### LINQ 表达式
 
-一些LiteDB方法支持谓词，这将允许你更简单地查询强类型文档。如果你使用`BsonDocument`，你需要使用经验的`Query`类方法。
+有些LiteDB方法支持谓词，这将允许你更简单地查询强类型文档。如果你使用的是`BsonDocument`，你需要使用经典的`Query`类方法。
 
 ```C#
 col.Find(x => x.Name == "John Doe")
