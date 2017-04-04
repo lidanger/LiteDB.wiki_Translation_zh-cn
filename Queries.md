@@ -88,7 +88,7 @@ var result = col
 // 这种方式更高效
 var count = collection.Count(Query.EQ("Name", "John Doe"));
 
-// Than use Find + Count
+// 然后使用 Find + Count
 var count = collection.Find(Query.EQ("Name", "John Doe")).Count();
 ```
 
