@@ -48,7 +48,7 @@ using(var db = new LiteDatabase(@"C:\Temp\MyData.db"))
 }
 ```
 
-### 使用文件
+### 用于文件
 
 需要存储文件？没问题：使用FileStorage。
 
