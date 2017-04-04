@@ -6,33 +6,33 @@
 
 #### 目录
 
-- [Getting Started](Getting-Started)
+- [入门指南](Getting-Started)
 
 **数据建模**
-- [Data Structure](Data-Structure)
+- [数据结构](Data-Structure)
 - [BsonDocument](BsonDocument)
-- [Object Mapping](Object-Mapping)
-- [Relationships with Document References](DbRef)
-- [Collections](Collections)
-- [FileStorage](FileStorage)
+- [对象映射](Object-Mapping)
+- [文档间的引用关系](DbRef)
+- [集合](Collections)
+- [文件存储](FileStorage)
 
 **索引**
-- [Using Indexes](Indexes)
+- [使用索引](Indexes)
     
 **查询**
-- [Query Documents](Queries)
+- [查询文档](Queries)
 
 **数据库**
-- [How LiteDB Works](How-LiteDB-Works)
-- [Connection String](Connection-String)
-- [Transactions / Concurrency](Transactions-and-Concurrency)
-- [Journaling / Recovery](Journaling-and-Recovery)
-- [Repository Pattern](LiteRepository)
+- [LiteDB如何运行](How-LiteDB-Works)
+- [连接字符串](Connection-String)
+- [事务 / 并发](Transactions-and-Concurrency)
+- [日志 / 恢复](Journaling-and-Recovery)
+- [资源库模式](LiteRepository)
 
 **Version 3 变化**
-- [Portable Version](Portable-Version)
-- [How update your datafile](Update-Datafile)
-- [Changes from v1.0.x / v2.0.x](Changelog)
+- [便携版本](Portable-Version)
+- [如何升级你的数据文件](Update-Datafile)
+- [v1.0.x / v2.0.x 以来的变化](Changelog)
 
 **Shell**
-- [Using Shell](Shell)
+- [使用 Shell](Shell)
