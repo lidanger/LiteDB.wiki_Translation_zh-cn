@@ -12,7 +12,7 @@ LiteDB是一个简单，快速和轻量级的嵌入式.NET文档数据库。Lite
 
 LiteDB是一个无服务器数据库，因此不需要安装。只需要复制 [LiteDB.dll](https://github.com/mbdavid/LiteDB/releases) 到你的 Bin 文件夹并添加为引用即可。或者如果你喜欢，你可以通过 NuGet: `Install-Package LiteDB`安装。如果你要运行在一个web环境下，确认你的IIS用户对数据文件夹有写权限。
 
-### First 例子
+### 第一个例子
 
 A quick example to store and search for documents:
 
@@ -56,7 +56,7 @@ using(var db = new LiteDatabase(@"C:\Temp\MyData.db"))
 }
 ```
 
-### Working with files
+### 用于文件
 
 Need to store files? No problem: use FileStorage.
 
