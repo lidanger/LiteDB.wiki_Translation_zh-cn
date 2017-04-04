@@ -1,4 +1,4 @@
-`LiteRepository`是一个访问你的数据库的新类。LiteRepository通过`LiteDatabase`实现，只是一个不使用`LiteCollection`类快速访问你的数据并使用Fluent API查询的层
+`LiteRepository`是访问你的数据库的一个新类。LiteRepository通过`LiteDatabase`实现，只是一个不使用`LiteCollection`类快速访问你的数据，以及使用Fluent API查询的包装层
 
 ```C#
 using(var db = new LiteRepository(connectionString))
@@ -31,4 +31,4 @@ using(var db = new LiteRepository(connectionString))
 
 集合名称可以省略，会被新的`BsonMapper.ResolveCollectionName`函数解析（默认：`typeof(T).Name`）。
 
-这个API是受这个牛X的项目的启发[NPoco Micro-ORM](https://github.com/schotime/NPoco)
+这个API是受这个牛X项目的启发[NPoco Micro-ORM](https://github.com/schotime/NPoco)
