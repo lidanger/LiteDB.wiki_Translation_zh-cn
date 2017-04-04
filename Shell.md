@@ -1,4 +1,4 @@
-LiteDB项目有一个简单的控制台应用程序（LiteDB.Shell.exe），可以用于你的数据库。查看，更新和测试你的数据时它会非常有用。Shell工具使用一个断开的'LiteEngine'实例，因此每条命令会连接（in read only if you are only quering）和执行然后断开。
+LiteDB项目有一个简单的控制台应用程序（LiteDB.Shell.exe）可以用于你的数据库。要查看、更新和测试你的数据时它会很有用。Shell工具使用的是一个断开的'LiteEngine'实例，因此每条命令执行时会先连接，然后执行，再断开。
 
 ### 参考
 
@@ -105,4 +105,4 @@ LiteDB项目有一个简单的控制台应用程序（LiteDB.Shell.exe），可�
 
 - **`userversion [N]`** - 获取/设置用户数据库文件版本
 
-- **`shrink [password]`** - 缩小数据库，删除空页和改变密码（可选）。如果未提供密码，新数据文件不会加密。
+- **`shrink [password]`** - 压缩数据库，删除空页和改变密码（可选）。如果未提供密码，新数据文件不会加密。
