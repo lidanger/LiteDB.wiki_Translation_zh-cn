@@ -26,7 +26,7 @@ LiteDB使用BSON（二进制JSON）数据格式存储文档。BSON是包含有�
 
 LiteDB使用[BSON 数据类型](http://bsonspec.org/spec.html)的一个子集。如下为所有支持的LiteDB BSON数据类型和.NET对应关系。
 
-|BSON Type |.NET type                                                   |
+|BSON 类型 |.NET 类型                                                   |
 |----------|------------------------------------------------------------|
 |MinValue  |-                                                           |
 |Null      |Any .NET object with `null` value                           |
@@ -44,11 +44,11 @@ LiteDB使用[BSON 数据类型](http://bsonspec.org/spec.html)的一个子集。
 |DateTime  |`System.DateTime`                                           |
 |MaxValue  |-                                                           |
 
-### JSON Extended
+### 扩展 JSON 
 
 要序列化一个文档为JSON，LiteDB使用一个扩展版本的JSON，这样不会丢失任何不存在于JSON中的BSON类型信息。扩展数据类型被表示为一个嵌入文档，用`$`作为初始键，并且值是字符串。
 
-|BSON 数据类型 |JSON 表示法                                           |描述                               |
+|BSON 数据类型  |JSON 表示法                                            |描述                               |
 |--------------|------------------------------------------------------|-----------------------------------|
 |ObjectId      |`{ "$oid": "507f1f55bcf96cd799438110" }`              |12 bytes in hex format             |
 |Date          |`{ "$date": "2015-01-01T00:00:00Z" }`                 |UTC and ISO-8601 format            |
