@@ -16,13 +16,13 @@ public class Order
 }
 ```
 
-如果你不做任何映射，当你保存一个`Order`，`Customer`会被保存为一个嵌入的文档（没有链接到任何其他集合）。如果你改变`Customer`集合中的顾客名称，这个更改不会影响`Order`。
+如果你不做任何映射，当你保存一个`Order`，`Customer`会被保存为一个嵌入的文档（没有链接到任何其他集合）。如果你改变`Customer`集合中的顾客名称，这个更改不会影响`Order`集合。
 
 ```JS
 Order => { _id: 123, Customer: { CustomerId: 99, Name: "John Doe" } }
 ```
 
-如果你想只存储顾客引用在`Order`，你可以装饰你的类：
+如果你想顾客引用只存储在`Order`集合，你可以装饰你的类：
 
 ```C#
 public class Order
@@ -80,4 +80,4 @@ BsonMapper.Global.Entity<Order>()
     .DbRef(x => x.Products, "products");
 ```
 
-如果从数据文件恢复时你的`Products`字段是null或空列表，LiteDB将respect（这是什么意思？）。如果你在查询中不使用`Include`，类被加载时，只会设置`ID`（所有其他属性会一直是默认/null值）。
+如果从数据文件恢复时你的`Products`字段是null或空列表，LiteDB将什么也不做（respect）。如果你在查询中不使用`Include`，类被加载时，只会设置`ID`（所有其他属性会一直是默认/null值）。
