@@ -105,7 +105,7 @@ var doe = doc["customerLastName"].AsString;
 |----------------|----------------------------------------------|
 |`ObjectId`      |`ObjectId.NewObjectId()`                      |
 |`Guid`          |`Guid.NewGuid()`                              |
-|`Int32`         |Auto-increment, per collection, starting in 1 |
+|`Int32`         |自增，每个集合都有，从1开始                       |
 
 但是如果你不想使用任何内置方法，或者想为**Id**使用另一个数据类型，你可以自己设置它：
 
