@@ -1,8 +1,8 @@
-LiteDB是一个简单，快速和轻量级的嵌入式.NET文档数据库。LiteDB受到MongoDB启发，它的API非常类似于MongoDB的官方.NET API。
+LiteDB是一个简单、快速、轻量级的嵌入式.NET文档数据库。LiteDB受到MongoDB启发，因此它的API非常类似于MongoDB的官方.NET API。
 
 ### 如何安装
 
-LiteDB是一个无服务器数据库，因此不需要安装。只需要复制[LiteDB.dll](https://github.com/mbdavid/LiteDB/releases)到你的Bin文件夹并添加为引用即可。或者，如果你喜欢的话，可以通过NuGet安装：`Install-Package LiteDB`。如果你要运行在一个Web环境下，确保你的IIS用户对数据文件夹有写权限。
+LiteDB是一个无服务器数据库，因此不需要安装。只需要复制[LiteDB.dll](https://github.com/mbdavid/LiteDB/releases)到你的Bin文件夹并添加引用即可。当然，如果你喜欢的话，也可以通过NuGet安装：`Install-Package LiteDB`。如果你要在一个Web环境下运行，请确保你的IIS用户对数据文件夹有写权限。
 
 ### 第一个例子
 
@@ -24,13 +24,13 @@ using(var db = new LiteDatabase(@"C:\Temp\MyData.db"))
 	// 获取一个集合（或不存在而创建它）
 	var col = db.GetCollection<Customer>("customers");
 
-    // 创建你的新自定义实例
+        // 创建你的新自定义实例
 	var customer = new Customer
-    { 
-        Name = "John Doe", 
-        Phones = new string[] { "8000-0000", "9000-0000" }, 
-        IsActive = true
-    };
+        { 
+            Name = "John Doe", 
+            Phones = new string[] { "8000-0000", "9000-0000" }, 
+            IsActive = true
+        };
 	
 	// 插入一个新的自定义文档(Id是自增的)
 	col.Insert(customer);
