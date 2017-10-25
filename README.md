@@ -5,7 +5,6 @@
 
 原项目地址：https://github.com/mbdavid/LiteDB
 
-以下为原版自述文件
 ====
 
 # LiteDB - 一个单数据文件 .NET NoSQL 文档存储
