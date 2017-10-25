@@ -45,7 +45,7 @@ LiteDB 一个小巧、快速、轻量级的 NoSQL 嵌入式数据库。
 
 ## 文档
 
-访问 [the Wiki](https://github.com/mbdavid/LiteDB/wiki) 即可获取全部文档。简单中文版本，[请看这里](https://github.com/lidanger/LiteDB.wiki_Translation_zh-cn)。
+访问 [Wiki](https://github.com/mbdavid/LiteDB/wiki) 即可获取全部文档。简单中文版本，[请看这里](https://github.com/lidanger/LiteDB.wiki_Translation_zh-cn)。
 
 ## 下载
 
