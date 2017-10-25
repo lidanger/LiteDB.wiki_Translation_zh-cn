@@ -139,7 +139,7 @@ using(var db = new LiteDatabase("MyOrderDatafile.db"))
 ## 应用场景
 
 - 桌面/本地的小应用程序
-- Application file format
+- 应用程序文件格式（Application file format）
 - 小型 web 应用程序
 - **每个账户/用户**一个数据库的数据存储
 - 少量并发写操作
