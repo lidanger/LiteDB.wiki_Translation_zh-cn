@@ -12,10 +12,10 @@ LiteDB 一个小巧、快速、轻量级的 NoSQL 嵌入式数据库。
 - Serverless NoSQL 文档存储
 - 类似于 MongoDB 的简单 API
 - 100% C# 代码，支持.NET 3.5 / .NET 4.0 / NETStandard 1.3 / NETStandard 2.0，单 DLL (小于 300kb)
-- 线程和进程安全
-- 文档/操作级别的 ACID
-- 写失败后的数据还原 (日志模式)
-- 使用 DES (AES) 加密算法进行数据文件加密
+- 支持线程和进程安全
+- 支持文档/操作级别的 ACID
+- 支持写失败后的数据还原 (日志模式)
+- 可使用 DES (AES) 加密算法进行数据文件加密
 - 可使用特性或 fluent 映射 API 将你的 POCO类映射为 `BsonDocument`
 - 可存储文件与流数据 (类似 MongoDB 的 GridFS)
 - 单数据文件存储 (类似 SQLite)
