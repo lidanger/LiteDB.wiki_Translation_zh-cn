@@ -46,7 +46,7 @@ LiteDB 一个小巧、快速、轻量级的 NoSQL 嵌入式数据库。
 
 ## 下载
 
-在 [LiteDB Releases](https://github.com/mbdavid/LiteDB/releases) 下载源代码或二进制文件。
+可以在 [LiteDB Releases](https://github.com/mbdavid/LiteDB/releases) 下载源代码或二进制文件。
 
 ## LiteDB 使用入门
 
