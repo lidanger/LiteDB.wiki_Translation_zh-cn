@@ -39,7 +39,7 @@ LiteDB 一个小巧、快速、轻量级的 NoSQL 嵌入式数据库。
 - 新的 shell 命令：基于表达式选择/转换文档以及更新字段
 - 浏览全部[更新日志](https://github.com/mbdavid/LiteDB/wiki/Changelog)
 
-## Try online
+## 在线试用
 
 [试试 LiteDB Web Shell](http://www.litedb.org/#shell). 由于安全原因，在线版本中不是所有命令都是可用的。请使用离线版本进行全特性测试。
 
