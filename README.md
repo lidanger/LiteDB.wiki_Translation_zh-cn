@@ -38,7 +38,7 @@ LiteDB 一个小巧、快速、轻量级的 NoSQL 嵌入式数据库。
 
 ## 在线试用
 
-[试试 LiteDB Web Shell](http://www.litedb.org/#shell). 由于安全原因，在线版本中不是所有命令都是可用的。请使用离线版本进行全特性测试。
+[试试 LiteDB Web Shell](http://www.litedb.org/#shell). 由于安全原因，并非所有命令在线版本中都是可用的。请使用离线版本进行全特性测试。
 
 ## 文档
 
