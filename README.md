@@ -6,15 +6,15 @@ LiteDB 一个小巧、快速、轻量级的 NoSQL 嵌入式数据库。
 
 - Serverless NoSQL 文档存储
 - 类似于 MongoDB 的简单 API
-- 100% C# 代码，支持.NET 3.5 / .NET 4.0 / NETStandard 1.3 / NETStandard 2.0，单 DLL (小于 300kb)
+- 100% C# 代码，支持 .NET 3.5 / .NET 4.0 / NETStandard 1.3 / NETStandard 2.0，单 DLL (小于 300 kb)
 - 支持线程和进程安全
 - 支持文档/操作级别的 ACID
 - 支持写失败后的数据还原 (日志模式)
 - 可使用 DES (AES) 加密算法进行数据文件加密
-- 可使用特性或 fluent 映射 API 将你的 POCO类映射为 `BsonDocument`
+- 可使用特性或 fluent 映射 API 将你的 POCO 类映射为 `BsonDocument`
 - 可存储文件与流数据 (类似 MongoDB 的 GridFS)
 - 单数据文件存储 (类似 SQLite)
-- 支持基于文档字段索引的快速搜索 (每个集合支持多达16个索引)
+- 支持基于文档字段索引的快速搜索 (每个集合支持多达 16 个索引)
 - 支持 LINQ 查询
 - Shell 命令行 - [试试这个在线版本](http://www.litedb.org/#shell)
 - 相当快 - [这里是与 SQLite 的对比结果](https://github.com/mbdavid/LiteDB-Perf)
@@ -33,7 +33,7 @@ LiteDB 一个小巧、快速、轻量级的 NoSQL 嵌入式数据库。
 
 ## 在线试用
 
-[试试 LiteDB Web Shell](http://www.litedb.org/#shell). 由于安全原因，并非所有命令在线版本中都是可用的。请使用离线版本进行全特性测试。
+[试试 LiteDB Web Shell](http://www.litedb.org/#shell)。 由于安全原因，在线版本中，并非所有命令都可用。请使用离线版本进行全特性测试。
 
 ## 文档
 
@@ -107,8 +107,8 @@ var mapper = BsonMapper.Global;
 
 // "Produts" 和 "Customer" 来自其他集合 (而不是嵌入的文档)
 mapper.Entity<Order>()
-    .DbRef(x => x.Customer, "customers")   // 1对1/0引用
-    .DbRef(x => x.Products, "products")    // 1对多引用
+    .DbRef(x => x.Customer, "customers")   // 1 对 1/0 引用
+    .DbRef(x => x.Products, "products")    // 1 对多引用
     .Field(x => x.ShippingAddress, "addr"); // 嵌入的子文档
             
 using(var db = new LiteDatabase("MyOrderDatafile.db"))
@@ -118,7 +118,7 @@ using(var db = new LiteDatabase("MyOrderDatafile.db"))
     // 当查询 Order 时，包含引用
     var query = orders
         .Include(x => x.Customer)
-        .Include(x => x.Products) // 1对多引用
+        .Include(x => x.Products) // 1 对多引用
         .Find(x => x.OrderDate <= DateTime.Now);
 
     // 每个 Order 实例都会加载 Customer/Products 引用
@@ -133,18 +133,21 @@ using(var db = new LiteDatabase("MyOrderDatafile.db"))
 
 ## 应用场景
 
-- 桌面/本地的小应用程序
+- 桌面/本地化的小应用程序
 - 应用程序文件格式（Application file format）
 - 小型 web 应用程序
-- **每个账户/用户**一个数据库的数据存储
+- **一个账户/用户**一个数据库的数据存储
 - 少量并发写操作
 
-## 插件
+## 第三方工具
 
 - 一个 GUI 查看器工具: https://github.com/falahati/LiteDBViewer
 - 一个 GUI 编辑器工具: https://github.com/JosefNemec/LiteDbExplorer 
+- LiteDB 管理工具: https://darwich.mx/downloads/
 - Lucene.NET 目录: https://github.com/sheryever/LiteDBDirectory
 - LINQPad 支持: https://github.com/adospace/litedbpad
+- F# 支持: https://github.com/Zaid-Ajaj/LiteDB.FSharp
+- PowerShell 封装: https://github.com/v2kiran/PSLiteDB
 
 ## 更新日志
 
